@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import TPThankYou from "./pages/TPThankYou";
 import TPSurvey from "./pages/TPSurvey";
 import NoMatch from "./pages/NoMatch";
+import "./App.css";
 
 function App() {
   return (
