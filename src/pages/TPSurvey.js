@@ -1,6 +1,16 @@
 import React, { useEffect } from "react";
+import styled from "styled-components";
 import postscribe from "postscribe";
-import "./styles/TPSurvey.css";
+
+const Container = styled.div`
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  iframe {
+    border-radius: 0 !important;
+  }
+`;
 
 export default function TPSurvey() {
   useEffect(() => {
@@ -11,11 +21,11 @@ export default function TPSurvey() {
   });
 
   return (
-    <div
+    <Container
       id="wrapper"
       data-tf-widget="LjX9FL18"
       data-tf-inline-on-mobile
       data-tf-medium="snippet"
-    ></div>
+    ></Container>
   );
 }
