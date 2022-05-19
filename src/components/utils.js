@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const TextBox = styled.div`
-  color: rgb(255, 255, 255, ${(props) => (props.big ? `1` : `0.7`)});
   font-weight: ${(props) => props.fontWeight};
   width: 100%;
   text-align: center;

@@ -8,8 +8,7 @@ export const Global = createGlobalStyle`
     box-sizing: border-box;
   }
   :root {
-    
-    font-size: ${px2vw(24)};
+      font-size: ${px2vw(24)};
 
       @media (min-width: 768px) {
         font-size: ${px2vw(18)};
