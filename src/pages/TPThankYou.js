@@ -15,7 +15,7 @@ const Image = styled.img`
   }
 `;
 
-const Text = styled(TextBox)`
+const Text = styled((props) => <TextBox {...props} />)`
   color: color: rgb(255, 255, 255, ${(props) => (props.big ? `1` : `0.7`)});
 `;
 

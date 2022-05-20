@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 
-const AppBar = styled(RawAppBar)`
+const AppBar = styled((props) => <RawAppBar {...props} />)`
   background: ${(props) => props.theme.colors.main};
 `;
 

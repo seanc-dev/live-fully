@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-// import Image from "../components/Image.js";
 import logo from "../assets/logo-white.svg";
 
 const Logo = styled.img`
@@ -20,7 +19,7 @@ const Header = styled.header`
   // color: white;
 `;
 
-function Home() {
+const Home = () => {
   return (
     <div>
       <Header className="Home-header">
@@ -30,6 +29,6 @@ function Home() {
       </Header>
     </div>
   );
-}
+};
 
 export default Home;
