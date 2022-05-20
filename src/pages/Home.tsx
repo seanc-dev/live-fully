@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { TextBox } from "../components/utils.tsx";
-// import Image from "../components/Image.js";
 import logo from "../assets/logo-512.svg";
 
 const Logo = styled.img`
@@ -18,18 +17,15 @@ const Header = styled.header`
   font-size: calc(10px + 2vmin);
 `;
 
-function Home() {
+const Home: React.FC = () => {
   return (
-    <div>
-      <Header className="Home-header">
-        <Logo src={logo} alt="logo" />
-        {/* <Image height="60vmin" src={logo} alt="logo" pointerEvents="none" /> */}
-        <TextBox>
-          This site is under construction, please check back later
-        </TextBox>
-      </Header>
-    </div>
+    <Header className="Home-header">
+      <Logo src={logo} alt="logo" />
+      <TextBox>
+        This site is under construction, please check back later
+      </TextBox>
+    </Header>
   );
-}
+};
 
 export default Home;

@@ -14,7 +14,7 @@ const Image = styled.img`
 `;
 
 const Text = styled(TextBox)`
-  color: rgb(255, 255, 255, ${(props) => (props.big ? `1` : `0.7`)});
+  color: rgb(255, 255, 255, ${(props) => (props.big ? `1` : `0.7`)}) !important;
 `;
 
 const Link = styled.a`

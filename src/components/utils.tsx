@@ -8,6 +8,7 @@ export interface TextBoxProps {
   fontWeight: string;
   lineHeight: string;
   big: boolean;
+  leftAlign: boolean;
 }
 
 const TextBoxUnstyled = styled.div<TextBoxProps>`
@@ -15,12 +16,12 @@ const TextBoxUnstyled = styled.div<TextBoxProps>`
   color: ${({ theme }) => theme.colors.fonts.main};
   font-weight: ${(props) => props.fontWeight};
   width: 100%;
-  text-align: center;
+  text-align: ${(props) => (props.leftAlign ? "left" : "center")};
   line-height: ${(props) => (props.lineHeight ? props.lineHeight : `32px`)};
   font-size: ${(props) => (props.big ? `24px` : `20px`)};
 
   @media (max-width: 768px) {
-    line-height: 28px;
+    line-height: ${(props) => (props.lineHeight ? props.lineHeight : `28px`)};
     font-size: ${(props) => (props.big ? `20px` : `16px`)};
   }
 `;
@@ -28,6 +29,47 @@ const TextBoxUnstyled = styled.div<TextBoxProps>`
 export const TextBox: React.FC<Omit<TextBoxProps, "theme">> = (props) => (
   <TextBoxUnstyled {...props} theme={theme} />
 );
+
+export const SubTitle = styled(TextBox)`
+  font-style: italic;
+  line-height: ${(props) => (props.lineHeight ? props.lineHeight : `40px`)};
+  font-size: ${(props) => (props.big ? `30px` : `24px`)};
+
+  @media (max-width: 768px) {
+    line-height: ${(props) => (props.big ? props.lineHeight : `24px`)};
+    font-size: ${(props) => (props.big ? `24px` : `20px`)};
+  }
+`;
+
+export const H1 = styled(TextBox)`
+  font-size: 84px;
+  line-height: 112px;
+
+  @media (max-width: 768px) {
+    font-size: 72px;
+    line-height: 96px;
+  }
+`;
+
+export const H2 = styled(TextBox)`
+  font-size: 64px;
+  line-height: 86px;
+
+  @media (max-width: 768px) {
+    font-size: 54px;
+    line-height: 72px;
+  }
+`;
+
+export const H4 = styled(TextBox)`
+  font-size: 32px;
+  line-height: 42px;
+
+  @media (max-width: 768px) {
+    font-size: 27px;
+    line-height: 36px;
+  }
+`;
 
 export interface MarginProps {
   marginTop: string;

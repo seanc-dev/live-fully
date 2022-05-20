@@ -1,0 +1,4 @@
+- Correct favicon
+- Correct manifest with app title
+- Update refund and guarantee policy
+- Check 2.2 of terms of service
