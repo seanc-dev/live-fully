@@ -1,8 +1,6 @@
 import React from "react";
-import styled from "@emotion/styled";
-
-import { TextBox, Container, Margin } from "../components/utils";
-
+import styled from "styled-components";
+import { TextBox, Container, Margin } from "../components/utils.tsx";
 import avatar from "../assets/avatar-lg.jpg";
 
 const Image = styled.img`
@@ -15,8 +13,8 @@ const Image = styled.img`
   }
 `;
 
-const Text = styled((props) => <TextBox {...props} />)`
-  color: color: rgb(255, 255, 255, ${(props) => (props.big ? `1` : `0.7`)});
+const Text = styled(TextBox)`
+  color: rgb(255, 255, 255, ${(props) => (props.big ? `1` : `0.7`)}) !important;
 `;
 
 const Link = styled.a`

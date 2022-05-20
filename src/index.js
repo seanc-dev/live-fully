@@ -1,9 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import ThemeProvider from "@emotion/styled";
-import theme from "./theme/index.tsx";
-import GlobalStyles from "./theme/GlobalStyles";
+import GlobalStyles from "./theme/GlobalStyles.js";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -12,10 +10,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <App />
-      </ThemeProvider>
+      <GlobalStyles />
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-
-import logo from "../assets/logo-white.svg";
+import { TextBox } from "../components/utils.tsx";
+import logo from "../assets/logo-512.svg";
 
 const Logo = styled.img`
   height: 60 vmin;
@@ -9,24 +9,22 @@ const Logo = styled.img`
 `;
 
 const Header = styled.header`
-  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  // color: white;
 `;
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
-    <div>
-      <Header className="Home-header">
-        <Logo src={logo} alt="logo" />
-        <p>This site is under construction, please check back later</p>
-      </Header>
-    </div>
+    <Header className="Home-header">
+      <Logo src={logo} alt="logo" />
+      <TextBox>
+        This site is under construction, please check back later
+      </TextBox>
+    </Header>
   );
 };
 

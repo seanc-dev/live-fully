@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import styled from "@emotion/styled";
 
-import Home from "./pages/Home";
+import Home from "./pages/Home.tsx";
 import TPThankYou from "./pages/TPThankYou";
 import TPSurvey from "./pages/TPSurvey";
 import Terms from "./pages/Terms";
