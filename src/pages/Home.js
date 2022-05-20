@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 // import Image from "../components/Image.js";
-import logo from "../logo.svg";
+import logo from "../assets/logo-512.svg";
 
 const Logo = styled.img`
   height: 60 vmin;
@@ -10,7 +10,6 @@ const Logo = styled.img`
 `;
 
 const Header = styled.header`
-  background-color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
