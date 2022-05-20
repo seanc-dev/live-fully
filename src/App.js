@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 import Home from "./pages/Home";
 import TPThankYou from "./pages/TPThankYou";

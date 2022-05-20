@@ -1,4 +1,4 @@
-import { DefaultTheme } from "styled-components";
+import { DefaultTheme } from "@emotion/react";
 
 const theme: DefaultTheme = {
   colors: {

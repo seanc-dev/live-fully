@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 import logo from "../assets/logo-white.svg";
 
@@ -24,7 +24,6 @@ const Home = () => {
     <div>
       <Header className="Home-header">
         <Logo src={logo} alt="logo" />
-        {/* <Image height="60vmin" src={logo} alt="logo" pointerEvents="none" /> */}
         <p>This site is under construction, please check back later</p>
       </Header>
     </div>
