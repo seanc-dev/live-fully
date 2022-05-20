@@ -3,15 +3,17 @@ import theme from "../theme/theme.tsx";
 
 type ThemeType = typeof theme;
 
-export interface TextBoxProps {
+export interface TextBlockProps {
   theme: ThemeType;
-  fontWeight: string;
-  lineHeight: string;
-  big: boolean;
-  leftAlign: boolean;
+  fontWeight?: string;
+  lineHeight?: string;
+  big?: boolean;
+  leftAlign?: boolean;
+  marginTop?: string;
+  marginBottom?: string;
 }
 
-const TextBoxUnstyled = styled.div<TextBoxProps>`
+const TextBlockUnstyled = styled.div<TextBlockProps>`
   font-family: ${({ theme }) => theme.fontFamily};
   color: ${({ theme }) => theme.colors.fonts.main};
   font-weight: ${(props) => props.fontWeight};
@@ -26,11 +28,23 @@ const TextBoxUnstyled = styled.div<TextBoxProps>`
   }
 `;
 
-export const TextBox: React.FC<Omit<TextBoxProps, "theme">> = (props) => (
-  <TextBoxUnstyled {...props} theme={theme} />
+export const TextBlock: React.FC<Omit<TextBlockProps, "theme">> = (
+  children,
+  marginBottom = "2vh",
+  marginTop = "2vh",
+  ...rest
+) => (
+  <TextBlockUnstyled
+    marginTop={marginTop}
+    marginBottom={marginBottom}
+    {...rest}
+    theme={theme}
+  >
+    {children}
+  </TextBlockUnstyled>
 );
 
-export const SubTitle = styled(TextBox)`
+export const SubTitle = styled(TextBlock)`
   font-style: italic;
   line-height: ${(props) => (props.lineHeight ? props.lineHeight : `40px`)};
   font-size: ${(props) => (props.big ? `30px` : `24px`)};
@@ -41,7 +55,7 @@ export const SubTitle = styled(TextBox)`
   }
 `;
 
-export const H1 = styled(TextBox)`
+export const H1 = styled(TextBlock)`
   font-size: 84px;
   line-height: 112px;
 
@@ -51,7 +65,7 @@ export const H1 = styled(TextBox)`
   }
 `;
 
-export const H2 = styled(TextBox)`
+export const H2 = styled(TextBlock)`
   font-size: 64px;
   line-height: 86px;
 
@@ -61,13 +75,24 @@ export const H2 = styled(TextBox)`
   }
 `;
 
-export const H4 = styled(TextBox)`
+export const H3 = styled(TextBlock)`
   font-size: 32px;
   line-height: 42px;
 
   @media (max-width: 768px) {
-    font-size: 27px;
+    font-size: 28px;
     line-height: 36px;
+  }
+`;
+
+export const H4 = styled(TextBlock)`
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    line-height: 32px;
   }
 `;
 

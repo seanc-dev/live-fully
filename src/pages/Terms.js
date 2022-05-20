@@ -3,9 +3,9 @@ import styled from "styled-components";
 import {
   Container,
   Margin,
-  TextBox,
+  TextBlock as TextBox,
   H1,
-  H4,
+  H3,
   SubTitle,
 } from "../components/utils.tsx";
 
@@ -17,15 +17,22 @@ export const InnerContainer = styled(Container)`
   }
 `;
 
-export const TextBlock = ({ children, ...rest }) => (
-  <Margin marginTop="2vh" marginBottom="2vh">
-    <TextBox {...rest}>{children}</TextBox>
+export const TextBlock = ({ children, leftAlign, ...rest }) => (
+  <Margin>
+    <TextBox leftAlign {...rest}>
+      {children}
+    </TextBox>
   </Margin>
 );
 
-export const SectionHeader = ({ children, ...rest }) => (
-  <Margin marginTop="4vh" marginBottom="2vh">
-    <H4 {...rest}>{children}</H4>
+export const SectionHeader = ({
+  children,
+  marginTop = "4vh",
+  marginBottom = "2vh",
+  ...rest
+}) => (
+  <Margin marginTop={marginTop} marginBottom={marginBottom}>
+    <H3 {...rest}>{children}</H3>
   </Margin>
 );
 
@@ -37,7 +44,7 @@ const Terms = () => {
           <H1>Terms of Service</H1>
           <SubTitle>For Live Fully Coaching</SubTitle>
           <Margin marginTop="5vh">
-            <H4>Preamble</H4>
+            <H3>Preamble</H3>
           </Margin>
           <TextBlock>
             Read carefully before purchasing, accessing or using any material
