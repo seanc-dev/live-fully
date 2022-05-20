@@ -9,24 +9,20 @@ const Logo = styled.img`
 `;
 
 const Header = styled.header`
-  background-color: #fff;
+  transform: translate(0, -5vh);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  // color: white;
 `;
 
 const Home = () => {
   return (
-    <div>
-      <Header className="Home-header">
-        <Logo src={logo} alt="logo" />
-        <p>This site is under construction, please check back later</p>
-      </Header>
-    </div>
+    <Header>
+      <Logo src={logo} alt="logo" />
+      <p>This site is under construction, please check back later</p>
+    </Header>
   );
 };
 

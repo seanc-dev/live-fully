@@ -33,7 +33,7 @@ const Terms = () => {
   return (
     <Container>
       <InnerContainer>
-        <Margin marginTop="10vh">
+        <Margin marginTop="10vh" marginBottom="10vh">
           <H1>Terms of Service</H1>
           <SubTitle>For Live Fully Coaching</SubTitle>
           <Margin marginTop="5vh">
@@ -123,7 +123,7 @@ const Terms = () => {
             support calls shall be recorded and shared to existing and future
             Live Fully Coaching students. All private material shall be kept
             confidential should the material ever be published outside of the
-            Live Fully Coaching and The Firebird Academy Program.
+            Live Fully Coaching.
           </TextBlock>
           <SectionHeader>2. WARRANTIES</SectionHeader>
           <TextBlock>
@@ -197,11 +197,11 @@ const Terms = () => {
             Audio and/or Visual Presentations, Documentation, and other elements
             of the Program(s), or any other intellectual property rights of Live
             Fully Coaching whether by implication, estoppel, or otherwise. Any
-            and all trademarks or service marks that Fabian Moreno Services uses
-            in connection with services rendered by Fabian Moreno Services are
-            marks owned by Live Fully Coaching. This Agreement does not grant
-            You any right, license, or interest in such marks, and You shall not
-            assert any right, license, or interest in such marks or any words or
+            and all trademarks or service marks that Live Fully Coaching uses in
+            connection with services rendered by Live Fully Coaching are marks
+            owned by Live Fully Coaching. This Agreement does not grant You any
+            right, license, or interest in such marks, and You shall not assert
+            any right, license, or interest in such marks or any words or
             designs that are confusingly similar to such marks.
           </TextBlock>
           <SectionHeader>4. REFUND POLICY</SectionHeader>
@@ -227,25 +227,25 @@ const Terms = () => {
           </TextBlock>
           <TextBlock>
             5.2. Indemnification: You will, at Your own expense, defend,
-            indemnify, and hold Fabian Moreno Services, its agents, and
-            employees harmless from any and all claims, actions, liabilities,
-            injuries, damages, losses, grants, costs, and expenses, including
-            attorney fees, arising out of or in connection with any use of the
-            Program(s) of this Agreement.
+            indemnify, and hold Live Fully Coaching, its agents, and employees
+            harmless from any and all claims, actions, liabilities, injuries,
+            damages, losses, grants, costs, and expenses, including attorney
+            fees, arising out of or in connection with any use of the Program(s)
+            of this Agreement.
           </TextBlock>
           <TextBlock>
             5.3. Integration: This Agreement, along with any additional terms or
             policies incorporated herein by reference, represents the entire
-            Agreement between You and Fabian Moreno Services concerning the
+            Agreement between You and Live Fully Coaching concerning the
             Program, and this Agreement supersedes and replaces any prior
             proposal, representation, or understanding You may have had with
-            Fabian Moreno Services relating to the Program, whether oral or
+            Live Fully Coaching relating to the Program, whether oral or
             written.
           </TextBlock>
           <TextBlock>
-            5.4. Amendment: Fabian Moreno Services reserves the right, in its
-            sole discretion, to amend this Agreement from time to time by
-            posting an updated version of the Agreement at www.fabianmoreno.net
+            5.4. Amendment: Live Fully Coaching reserves the right, in its sole
+            discretion, to amend this Agreement from time to time by posting an
+            updated version of the Agreement at www.livefully.coach
           </TextBlock>
         </Margin>
       </InnerContainer>
