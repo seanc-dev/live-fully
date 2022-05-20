@@ -1,7 +1,18 @@
 import styled from "styled-components";
+import theme from "../theme/theme.tsx";
 
-export const TextBox = styled.div`
-  color: rgb(255, 255, 255, ${(props) => (props.big ? `1` : `0.7`)});
+type ThemeType = typeof theme;
+
+export interface TextBoxProps {
+  theme: ThemeType;
+  fontWeight: string;
+  lineHeight: string;
+  big: boolean;
+}
+
+const TextBoxUnstyled = styled.div<TextBoxProps>`
+  font-family: ${({ theme }) => theme.fontFamily};
+  color: ${({ theme }) => theme.colors.fonts.main};
   font-weight: ${(props) => props.fontWeight};
   width: 100%;
   text-align: center;
@@ -14,7 +25,18 @@ export const TextBox = styled.div`
   }
 `;
 
-export const Margin = styled.div`
+export const TextBox: React.FC<Omit<TextBoxProps, "theme">> = (props) => (
+  <TextBoxUnstyled {...props} theme={theme} />
+);
+
+export interface MarginProps {
+  marginTop: string;
+  marginBottom: string;
+  marginLeft: string;
+  marginRight: string;
+}
+
+export const Margin = styled.div<MarginProps>`
   height: min-content;
   width: 100%;
   ${(props) => props.marginTop && `margin-top: ${props.marginTop};`}

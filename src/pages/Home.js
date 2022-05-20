@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { TextBox } from "../components/utils.tsx";
 // import Image from "../components/Image.js";
 import logo from "../assets/logo-512.svg";
 
@@ -16,7 +16,6 @@ const Header = styled.header`
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 `;
 
 function Home() {
@@ -25,7 +24,9 @@ function Home() {
       <Header className="Home-header">
         <Logo src={logo} alt="logo" />
         {/* <Image height="60vmin" src={logo} alt="logo" pointerEvents="none" /> */}
-        <p>This site is under construction, please check back later</p>
+        <TextBox>
+          This site is under construction, please check back later
+        </TextBox>
       </Header>
     </div>
   );

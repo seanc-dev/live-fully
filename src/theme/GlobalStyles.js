@@ -1,22 +1,24 @@
 import { createGlobalStyle } from "styled-components";
-import px2vw from "../utils/px2vw";
+import theme from "./theme.tsx";
 
-export const Global = createGlobalStyle`
+const Global = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  :root {
+  root {
     
-    font-size: ${px2vw(24)};
+    font-size: ${theme.fontSizes.body.mobile};
+    font-family: Cerebri
+    color: ${theme.colors.fonts.main};
 
       @media (min-width: 768px) {
-        font-size: ${px2vw(18)};
+        font-size: ${theme.fontSizes.body.tablet};
       }
 
       @media (min-width: 1024px) {
-        font-size: ${px2vw(16)};
+        font-size: ${theme.fontSizes.body.desktop};
       }
     }
 `;
