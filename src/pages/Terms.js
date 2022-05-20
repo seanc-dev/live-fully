@@ -9,7 +9,7 @@ import {
   SubTitle,
 } from "../components/utils.tsx";
 
-const InnerContainer = styled(Container)`
+export const InnerContainer = styled(Container)`
   width: 70%;
 
   @media (max-width: 768px;) {
@@ -49,19 +49,19 @@ const Terms = () => {
             <i>
               By purchasing, accessing or using the material and program(s), you
               acknowledge that you have read this agreement, you understand it,
-              and you accept and agree to by bound by its terms.
+              and you accept and agree to be bound by its terms.
             </i>
           </TextBlock>
           <TextBlock>
             This Agreement is a legal contract between the Parties known as Live
             Fully Coaching, located at Ruská 8, Praha 10-Vrsovice, Praha 101 00
             in Czechia (hereafter “Live Fully Coaching”, "We", "Our"), and
-            Yourself (“the Student” or “You”), whereas Live Fully Coaching is
-            engaged in the business of client coaching services, and whereas You
-            desire to engage Live Fully Coaching to provide personal guidance
-            and training to You in the form of Webinars, Audio and/or Visual
-            Presentations, Written Documents and periodic group and personal
-            coaching and evaluation (“Programs”).
+            Yourself (“the Student”, "Your", or “You”), whereas Live Fully
+            Coaching is engaged in the business of client coaching services, and
+            whereas You desire to engage Live Fully Coaching to provide personal
+            guidance and training to You in the form of Webinars, Audio and/or
+            Visual Presentations, Written Documents and periodic group and
+            personal coaching and evaluation (“Programs”).
           </TextBlock>
           <TextBlock>The Parties agree as follows:</TextBlock>
           <SectionHeader>1. MEMBERSHIP AND PROGRAM FEES</SectionHeader>
@@ -81,12 +81,12 @@ const Terms = () => {
             <br />– Access to 1 weekly 1-hour support call for 6 weeks or more.
           </TextBlock> */}
           <TextBlock>
-            1.1.2. Term: The Term of this Agreement come into effect upon Your
+            1.1.2 Term: The Term of this Agreement come into effect upon Your
             acceptance of this Agreement and payment of the applicable Program
             Fee.
           </TextBlock>
           <TextBlock>
-            1.1.3. Termination: Live Fully Coaching may terminate this Agreement
+            1.1.3 Termination: Live Fully Coaching may terminate this Agreement
             at any time if it deems your participation in one of its programs to
             be harmful either to Your wellbeing, or to the wellbeing of other
             participants. You may request termination of your account and rights
@@ -98,14 +98,14 @@ const Terms = () => {
             otherwise agreed upon in written form by Live Fully Coaching.
           </TextBlock>
           <TextBlock>
-            1.2. Program Fees: By accepting the terms of this Agreement, You
+            1.2 Program Fees: By accepting the terms of this Agreement, You
             agree and understand that You are committing to pay the full program
             fee before access to the course or You have agreed to a payment plan
             of which You will continue to pay until full program fee is paid off
             within 3 months of accepting these terms.
           </TextBlock>
           <TextBlock>
-            1.3. Promotional Material: By accepting the terms of this Agreement
+            1.3 Promotional Material: By accepting the terms of this Agreement
             and affirmatively seeking the benefits of membership in the
             Program(s) offered by Live Fully Coaching, You affirmatively agree
             and acknowledge that Live Fully Coaching may at any time reproduce
@@ -113,17 +113,18 @@ const Terms = () => {
             referencing, either directly or indirectly, Your experience
             participating in such Program(s), including any specific results
             experienced by You over the course of such participation. You agree
-            and acknowledge that this includes any written statements You may
-            publish to social media accounts and online forums as well as any
-            statements and/or images captured or otherwise recorded over the
+            and acknowledge that this includes any written statements that You
+            may publish to social media accounts and online forums as well as
+            any statements and/or images captured or otherwise recorded over the
             course of attendance at any event(s) related to such Program(s).
           </TextBlock>
           <TextBlock>
-            1.4 Weekly Support Calls: If done in a group format the weekly
-            support calls shall be recorded and shared to existing and future
-            Live Fully Coaching students. All private material shall be kept
-            confidential should the material ever be published outside of the
-            Live Fully Coaching.
+            1.4 Weekly Support Calls: The weekly support calls shall be recorded
+            and may be shared to existing and future Live Fully Coaching
+            Practitioner students for the purpose of supporting their training
+            as facilitators of Our programs. In such a case, said students will
+            be bound to the same level of confidentiality as anyone who is a
+            party to this agreement.
           </TextBlock>
           <SectionHeader>2. WARRANTIES</SectionHeader>
           <TextBlock>
@@ -134,7 +135,7 @@ const Terms = () => {
             entitled to a full refund. This is Our promise.
           </TextBlock>
           <TextBlock>
-            2.1.1 The specific criteria which will be used to assess whether Tou
+            2.1.1 The specific criteria which will be used to assess whether You
             have 'fully engaged' with the material, 'made an honest effort', and
             acheived 'the results the program seeks to bring about' will vary by
             program. These criteria and any other necessary details will be
