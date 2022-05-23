@@ -5,6 +5,7 @@ type ThemeType = typeof theme;
 
 export interface TextBlockProps {
   theme: ThemeType;
+  children: React.FC;
   fontWeight?: string;
   lineHeight?: string;
   big?: boolean;
@@ -28,20 +29,18 @@ const TextBlockUnstyled = styled.div<TextBlockProps>`
   }
 `;
 
-export const TextBlock: React.FC<Omit<TextBlockProps, "theme">> = (
+export const TextBlock: React.FC<Omit<TextBlockProps, "theme">> = ({
   children,
+  leftAlign,
   marginBottom = "2vh",
   marginTop = "2vh",
   ...rest
-) => (
-  <TextBlockUnstyled
-    marginTop={marginTop}
-    marginBottom={marginBottom}
-    {...rest}
-    theme={theme}
-  >
-    {children}
-  </TextBlockUnstyled>
+}) => (
+  <Margin marginBottom={marginBottom} marginTop={marginTop}>
+    <TextBlockUnstyled leftAlign={leftAlign} {...rest} theme={theme}>
+      {children}
+    </TextBlockUnstyled>
+  </Margin>
 );
 
 export const SubTitle = styled(TextBlock)`
@@ -55,15 +54,21 @@ export const SubTitle = styled(TextBlock)`
   }
 `;
 
-export const H1 = styled(TextBlock)`
-  font-size: 84px;
-  line-height: 112px;
+const H1Raw = styled(TextBlock)`
+  font-size: 96px;
+  line-height: 90px;
 
   @media (max-width: 768px) {
-    font-size: 72px;
-    line-height: 96px;
+    font-size: 84px;
+    line-height: 80px;
   }
 `;
+
+export const H1 = ({ children, marginBottom = "2vh", ...rest }) => (
+  <Margin marginBottom={marginBottom}>
+    <H1Raw {...rest}>{children}</H1Raw>
+  </Margin>
+);
 
 export const H2 = styled(TextBlock)`
   font-size: 64px;
@@ -84,6 +89,17 @@ export const H3 = styled(TextBlock)`
     line-height: 36px;
   }
 `;
+
+export const SectionHeader = ({
+  children,
+  marginTop = "4vh",
+  marginBottom = "2vh",
+  ...rest
+}) => (
+  <Margin marginTop={marginTop} marginBottom={marginBottom}>
+    <H3 {...rest}>{children}</H3>
+  </Margin>
+);
 
 export const H4 = styled(TextBlock)`
   font-size: 24px;
