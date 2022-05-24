@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { TextBlock, Container, Margin } from "../components/utils.tsx";
 import avatar from "../assets/avatar-lg.jpg";
+import FBFooter from "../components/FBFooter.tsx";
 
 const Image = styled.img`
   width: min-content;
@@ -74,6 +75,7 @@ const TPThankYou = () => {
           </Margin>
         </Margin>
       </InnerContainer>
+      <FBFooter />
     </ColoredContainer>
   );
 };
