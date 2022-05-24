@@ -24,8 +24,12 @@ const TextUnderline = styled(TextBlock)<TextUnderlineProps>`
   }
 `;
 
+const ColouredContainer = styled(Container)`
+  background-color: ${(props) => (props.color ? props.color : "transparent")};
+`;
+
 const InnerContainer = styled(Container)`
-  width: 80%;
+  width: 80% !important;
 
   @media (max-width: 768px) {
     width: 90%;
@@ -50,29 +54,34 @@ const LinkDiv = styled.div`
   opacity: 0.7;
 `;
 
-const FBFooter = (props) => {
+interface FBFooterProps {
+  textColor: string;
+  bgColor: string;
+}
+
+const FBFooter: React.FC<FBFooterProps> = ({ bgColor, textColor }) => {
   return (
-    <Container>
+    <ColouredContainer color={bgColor}>
       <InnerContainer>
         <LinksContainer>
           <LinkDiv>
-            <Link color="white" href="http://www.livefully.coach/terms">
+            <Link color={textColor} href="http://www.livefully.coach/terms">
               Terms of Service
             </Link>
           </LinkDiv>
           <LinkDiv>
-            <Link color="white" href="http://www.livefully.coach/privacy">
+            <Link color={textColor} href="http://www.livefully.coach/privacy">
               Privacy Policy
             </Link>
           </LinkDiv>
         </LinksContainer>
-        <TextUnderline color="white">
+        <TextUnderline color={textColor}>
           This site is not a part of the Facebook website or Facebook Inc.
           Additionally, This site is NOT endorsed by Facebook in any way.
           FACEBOOK is a trademark of FACEBOOK, Inc.
         </TextUnderline>
       </InnerContainer>
-    </Container>
+    </ColouredContainer>
   );
 };
 

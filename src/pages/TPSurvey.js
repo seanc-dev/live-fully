@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "@emotion/styled";
 import postscribe from "postscribe";
+import FBFooter from "../components/FBFooter.tsx";
 
 const Container = styled.div`
   margin: 0;
@@ -12,6 +13,12 @@ const Container = styled.div`
   }
 `;
 
+const ColouredContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: #004f73;
+`;
+
 export default function TPSurvey() {
   useEffect(() => {
     postscribe(
@@ -21,11 +28,14 @@ export default function TPSurvey() {
   });
 
   return (
-    <Container
-      id="wrapper"
-      data-tf-widget="LjX9FL18"
-      data-tf-inline-on-mobile
-      data-tf-medium="snippet"
-    ></Container>
+    <ColouredContainer>
+      <Container
+        id="wrapper"
+        data-tf-widget="LjX9FL18"
+        data-tf-inline-on-mobile
+        data-tf-medium="snippet"
+      ></Container>
+      <FBFooter bgColor="#004f73" textColor="white" />
+    </ColouredContainer>
   );
 }

@@ -29,16 +29,6 @@ export const cookies = [
   },
 ];
 
-interface listItem {
-  strong: string;
-  text?: string;
-}
-
-type listType = "dataUsage";
-
-// export const lists: {
-//   listType: listItem[]
-// } = {
 export const lists = {
   definitions: [
     {
