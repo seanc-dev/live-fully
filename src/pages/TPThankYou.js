@@ -75,7 +75,7 @@ const TPThankYou = () => {
           </Margin>
         </Margin>
       </InnerContainer>
-      <FBFooter />
+      <FBFooter bgColor="#004f73" textColor="white" />
     </ColoredContainer>
   );
 };
