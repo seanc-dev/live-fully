@@ -2,20 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import {
   Container,
+  InnerContainer,
   Margin,
   TextBlock as TextBox,
   H1,
   SectionHeader,
   SubTitle,
 } from "../components/utils.tsx";
-
-export const InnerContainer = styled(Container)`
-  width: 70%;
-
-  @media (max-width: 768px;) {
-    width: 80%;
-  }
-`;
 
 export const TextBlock = ({
   children,

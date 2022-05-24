@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import theme from "../theme/theme.tsx";
 
 type ThemeType = typeof theme;
@@ -14,12 +14,9 @@ export interface TextBlockProps {
   marginBottom?: string;
 }
 
-const TextBlockUnstyled = styled.div<TextBlockProps>`
-  font-family: ${({ theme }) => theme.fontFamily};
-  color: ${({ theme }) => theme.colors.fonts.main};
+const textStyles = css`
+  font-family: ${theme.fontFamily};
   font-weight: ${(props) => props.fontWeight};
-  width: 100%;
-  text-align: ${(props) => (props.leftAlign ? "left" : "center")};
   line-height: ${(props) => (props.lineHeight ? props.lineHeight : `32px`)};
   font-size: ${(props) => (props.big ? `24px` : `20px`)};
 
@@ -27,6 +24,13 @@ const TextBlockUnstyled = styled.div<TextBlockProps>`
     line-height: ${(props) => (props.lineHeight ? props.lineHeight : `28px`)};
     font-size: ${(props) => (props.big ? `20px` : `16px`)};
   }
+`;
+
+const TextBlockUnstyled = styled.div<TextBlockProps>`
+  ${textStyles}
+  color: ${theme.colors.fonts.main};
+  width: 100%;
+  text-align: ${(props) => (props.leftAlign ? "left" : "center")};
 `;
 
 export const TextBlock: React.FC<Omit<TextBlockProps, "theme">> = ({
@@ -42,6 +46,13 @@ export const TextBlock: React.FC<Omit<TextBlockProps, "theme">> = ({
     </TextBlockUnstyled>
   </Margin>
 );
+
+export const Link = styled.a`
+  ${textStyles}
+  color: ${(props) => (props.color ? props.color : theme.colors.fonts.main)};
+  font-weight: ${(props) => (props.regularWeight ? "normal" : "bold")};
+  text-decoration: underline;
+`;
 
 export const SubTitle = styled(TextBlock)`
   font-style: italic;
@@ -136,4 +147,12 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+export const InnerContainer = styled(Container)`
+  width: 70%;
+
+  @media (max-width: 768px;) {
+    width: 80%;
+  }
 `;
