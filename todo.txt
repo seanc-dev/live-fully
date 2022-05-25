@@ -1,4 +1,20 @@
-- Correct favicon
-- Correct manifest with app title
-- Update refund and guarantee policy
+x Correct favicon
+x Correct manifest with app title
+x Update refund and guarantee policy
 - Check 2.2 of terms of service
+- Add conversions API: https://www.facebook.com/business/help/387152639648383?id=818859032317965 and https://www.npmjs.com/package/react-facebook-pixel
+
+https://www.aspasiaprovou.com/privacy-policy
+- ask Aspasia for permission to use
+- ask Fabian for permission to use his terms as a base
+
+23.5
+- Build out list-generators for html code
+    - 2x lists in current section, data added for first. 
+    Content is in https://www.aspasiaprovou.com/privacy-policy
+
+24.5
+- Completed privacy 
+- Added FB footer
+
+Just fucking scrap cookies man. What a fucking frustrating waste of fucking time. Fuck.

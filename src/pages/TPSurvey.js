@@ -3,6 +3,8 @@ import styled from "@emotion/styled";
 import postscribe from "postscribe";
 import FBFooter from "../components/FBFooter.tsx";
 
+import theme from "../theme/theme.tsx";
+
 const Container = styled.div`
   margin: 0;
   padding: 0;
@@ -35,7 +37,7 @@ export default function TPSurvey() {
         data-tf-inline-on-mobile
         data-tf-medium="snippet"
       ></Container>
-      <FBFooter bgColor="#004f73" textColor="white" />
+      <FBFooter bgColor={theme.colors.tfBackground} textColor="white" />
     </ColouredContainer>
   );
 }

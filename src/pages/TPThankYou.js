@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { TextBlock, Container, Margin } from "../components/utils.tsx";
 import avatar from "../assets/avatar-lg.jpg";
 import FBFooter from "../components/FBFooter.tsx";
+import theme from "../theme/theme.tsx";
 
 const Image = styled.img`
   width: min-content;
@@ -24,7 +25,7 @@ const Link = styled.a`
 `;
 
 const ColoredContainer = styled(Container)`
-  background: #004f73;
+  background: ${theme.colors.tfBackground};
 `;
 
 const InnerContainer = styled(Container)`
@@ -75,7 +76,7 @@ const TPThankYou = () => {
           </Margin>
         </Margin>
       </InnerContainer>
-      <FBFooter bgColor="#004f73" textColor="white" />
+      <FBFooter bgColor={theme.colors.tfBackground} textColor="white" />
     </ColoredContainer>
   );
 };

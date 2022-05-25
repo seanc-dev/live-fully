@@ -3,6 +3,7 @@ const theme = {
   colors: {
     main: "#4292a2",
     secondary: "#oc2c47",
+    tfBackground: "#004f73",
     fonts: {
       main: "#0c2c47",
       secondary: "#2a2c34",
