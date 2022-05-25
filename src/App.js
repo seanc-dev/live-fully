@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import ReactPixel from "react-facebook-pixel";
@@ -20,7 +20,9 @@ const pixelOptions = {
 };
 
 const Container = styled.div`
+  ${(props) => !props.isLoaded && `display: none;`}
   height: 100%;
+  background-color: #004f73;
 `;
 
 const Link = styled.a`
@@ -35,7 +37,9 @@ const onAccept = () => {
 };
 
 const App = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
+    setIsLoaded(true);
     const acceptsCookies = document.cookie.replace(
       /(?:(?:^|.*;\s*)user-accepts-cookies\s*=\s*([^;]*).*$)|^.*$/,
       "$1"
@@ -45,7 +49,7 @@ const App = () => {
     ReactPixel.pageView();
   }, []);
   return (
-    <Container>
+    <Container isLoaded={isLoaded}>
       <CookieConsent
         style={{ background: theme.colors.tfBackground }}
         location="bottom"

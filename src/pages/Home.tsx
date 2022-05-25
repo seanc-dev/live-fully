@@ -21,7 +21,7 @@ const Home: React.FC = () => {
   return (
     <Header className="Home-header">
       <Logo src={logo} alt="logo" />
-      <TextBlock>
+      <TextBlock color="white">
         This site is under construction, please check back later
       </TextBlock>
     </Header>

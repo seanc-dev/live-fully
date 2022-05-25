@@ -28,7 +28,7 @@ const textStyles = css`
 
 const TextBlockUnstyled = styled.div<TextBlockProps>`
   ${textStyles}
-  color: ${theme.colors.fonts.main};
+  color: ${(props) => (props.color ? props.color : theme.colors.fonts.main)};
   width: 100%;
   text-align: ${(props) => (props.leftAlign ? "left" : "center")};
 `;
@@ -41,7 +41,7 @@ export const TextBlock: React.FC<Omit<TextBlockProps, "theme">> = ({
   ...rest
 }) => (
   <Margin marginBottom={marginBottom} marginTop={marginTop}>
-    <TextBlockUnstyled leftAlign={leftAlign} {...rest} theme={theme}>
+    <TextBlockUnstyled leftAlign={leftAlign} theme={theme} {...rest}>
       {children}
     </TextBlockUnstyled>
   </Margin>
